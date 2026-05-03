@@ -40,7 +40,7 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Link
-              // href="/all-tiles"
+              href="/all-tiles"
               className="btn btn-primary btn-lg px-8 group shadow-xl"
             >
               Browse Now

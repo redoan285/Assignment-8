@@ -10,7 +10,7 @@ const FeatureAndTiles = async () => {
   );
 
   const photos = await res.json()
-  const toPhotos = photos.slice(0, 6);
+  const toPhotos = photos.slice(0, 8);
 
   return (
     <section className="py-20 md:py-28 bg-base-100">

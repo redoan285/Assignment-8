@@ -46,7 +46,7 @@ export default function TileCard({ tile }) {
           </div>
 
           <Link
-            href={`/tile/${tile.id}`}
+             href={`/all-tiles/${tile.id}`}
             className="btn btn-primary btn-sm px-4 shadow-lg group/btn"
           >
             Details

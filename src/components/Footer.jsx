@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="bg-base-200 pt-16 pb-8">
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Brand Section */}
+          
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
               <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-primary-content font-bold text-xl shadow-lg">
@@ -35,7 +35,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
+          
           <div>
             <h3 className="text-lg font-bold mb-6">Quick Links</h3>
             <ul className="space-y-4">
@@ -46,7 +46,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Us */}
+         
           <div>
             <h3 className="text-lg font-bold mb-6">Contact Us</h3>
             <ul className="space-y-4">
@@ -65,7 +65,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter */}
+          
           <div>
             <h3 className="text-lg font-bold mb-6">Newsletter</h3>
             <p className="text-base-content/70 mb-4">Subscribe for the latest updates and design tips.</p>

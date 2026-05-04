@@ -9,13 +9,13 @@ export default function Hero() {
   return (
     <div className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-base-100 py-20 px-4 md:px-8">
       
-      {/* Background Blobs */}
+      
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl -z-10 animate-pulse" />
       <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl -z-10 animate-pulse delay-1000" />
 
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 
-        {/* LEFT CONTENT */}
+       
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
@@ -53,7 +53,7 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* RIGHT IMAGE SECTION */}
+       
         <motion.div
           initial={{ opacity: 0, scale: 0.9, rotate: 3 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -73,7 +73,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           </div>
 
-          {/* Floating Card 1 */}
+         
           <motion.div
             animate={{ y: [0, -15, 0] }}
             transition={{ duration: 4, repeat: Infinity }}
@@ -111,7 +111,7 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Floating Card 2 */}
+         
           <motion.div
             animate={{ y: [0, 15, 0] }}
             transition={{ duration: 5, repeat: Infinity, delay: 1 }}

@@ -1,16 +1,16 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import { useRouter } from "next/navigation"; // ✅ ADDED
+import { useRouter } from "next/navigation"; 
 import Footer from "../../components/Footer";
 import TileCard from "../../components/TileCard";
 import { Search, SlidersHorizontal, LayoutGrid, List, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { authClient } from "@/lib/auth-client"; // ✅ ADDED
+import { authClient } from "@/lib/auth-client";
 
 export default function AllTilesPage() {
-  const router = useRouter(); // ✅ ADDED
-  const { data: session, isPending } = authClient.useSession(); // ✅ ADDED
+  const router = useRouter(); 
+  const { data: session, isPending } = authClient.useSession(); 
 
   
   useEffect(() => {
@@ -31,7 +31,7 @@ export default function AllTilesPage() {
     return null;
   }
 
-  // ---------------- YOUR ORIGINAL CODE START ----------------
+
 
   const [tilesData, setTilesData] = useState([]);
 
@@ -96,7 +96,7 @@ export default function AllTilesPage() {
   return (
     <div className="min-h-screen flex flex-col bg-base-50">
       <main className="flex-grow">
-        {/* Hero Section */}
+       
         <section className="bg-gradient-to-br from-primary via-primary to-primary/90 pt-24 pb-32 px-4 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(#ffffff33_1px,transparent_1px)] [background-size:40px_40px] opacity-20" />
 
@@ -134,7 +134,7 @@ export default function AllTilesPage() {
           </div>
         </section>
 
-        {/* Filters & Results */}
+        
         <section className="container mx-auto px-4 md:px-8 -mt-12 pb-24 relative z-20">
           <div className="bg-base-100 rounded-3xl shadow-xl p-6 md:p-10 border border-base-200">
 

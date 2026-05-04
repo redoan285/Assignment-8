@@ -157,7 +157,7 @@ export default function UpdateProfilePage() {
           </motion.div>
         </div>
       </main>
-      {/* <Footer /> */}
+      
     </div>
   );
 }

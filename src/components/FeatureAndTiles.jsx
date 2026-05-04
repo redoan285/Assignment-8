@@ -26,7 +26,7 @@ const FeatureAndTiles = async () => {
             </p>
           </div>
 
-          {/* Desktop "See All" Button */}
+        
           <Link
             href="/all-tiles"
             className="hidden md:flex items-center gap-2 btn btn-outline btn-lg rounded-full px-8 group hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
@@ -36,14 +36,14 @@ const FeatureAndTiles = async () => {
           </Link>
         </div>
 
-        {/* Tiles Grid */}
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 md:gap-8">
           {toPhotos.map((tile) => (
             <TileCard key={tile.id} tile={tile} />
           ))}
         </div>
 
-        {/* Mobile "View More" Button */}
+        
         <div className="mt-12 flex justify-center md:hidden">
           <Link
             href="/all-tiles"

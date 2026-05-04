@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Tiles Gallery
 
-## Getting Started
+A premium Next.js application designed to showcase and manage a high-quality gallery of tiles. Built for aesthetics, performance, and a seamless user experience.
 
-First, run the development server:
+## 🚀 Live URL
+[https://assignment-8-two-xi.vercel.app/]https://assignment-8-two-xi.vercel.app/) *(Replace with your actual deployment link)*
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🎯 Purpose
+The purpose of this project is to provide a modern platform for users to discover, search, and view detailed information about various types of tiles (Ceramic, Porcelain, Marble, etc.). It features a robust authentication system and personalized profile management.
+
+## ✨ Key Features
+- **Modern Responsive Design**: Fully optimized for Mobile, Tablet, and Desktop.
+- **Premium Aesthetics**: Glassmorphism effects, smooth gradients, and modern typography.
+- **Robust Authentication**: Powered by BetterAuth with support for:
+    - Email/Password Credentials
+    - Google Social Login
+- **Interactive Gallery**:
+    - Real-time search by tile title.
+    - Category filtering.
+    - Animated transitions using Framer Motion.
+- **Private Routes**: Secure access to tile details and user profiles.
+- **Profile Management**:
+    - View account statistics.
+    - Update Name and Avatar Image URL.
+- **Dynamic Announcements**: Scrolling marquee for new arrivals and features.
+- **Global States**: Custom Loading and 404 (Not Found) pages.
+
+## 🛠️ Tech Stack
+- **Framework**: Next.js (App Router)
+- **Styling**: Tailwind CSS v4 & DaisyUI
+- **Database**: MongoDB & Mongoose
+- **Authentication**: BetterAuth
+- **Animations**: Framer Motion & CSS Animations
+- **Icons**: Lucide React
+- **Toasts**: React-Toastify
+
+## 📦 Installed Packages
+- `daisyui`
+- `better-auth`
+- `mongodb`
+- `mongoose`
+- `lucide-react`
+- `framer-motion`
+- `react-toastify`
+- `clsx`
+- `tailwind-merge`
+
+## ⚙️ Environment Variables
+Ensure you set the following in your `.env.local`:
+```env
+MONGODB_URI=your_mongodb_connection_string
+BETTER_AUTH_SECRET=your_auth_secret
+BETTER_AUTH_URL=http://localhost:3000
+GOOGLE_CLIENT_ID=your_google_id
+GOOGLE_CLIENT_SECRET=your_google_secret
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Getting Started
+1. Clone the repository.
+2. Install dependencies: `npm install`.
+3. Set up environment variables.
+4. Run the development server: `npm run dev`.

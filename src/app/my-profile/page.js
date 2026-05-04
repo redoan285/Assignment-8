@@ -50,7 +50,7 @@ export default function MyProfilePage() {
                 <div className="h-32 bg-gradient-to-r from-primary to-secondary relative">
                    <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 p-2 bg-base-100 rounded-full shadow-lg">
                       <div className="avatar">
-                        <div className="w-24 rounded-full border-4 border-white">
+                        <div className="w-80 rounded-full border-4 border-white">
                           <img src={user.image || `https://ui-avatars.com/api/?name=${user.name}`} />
                         </div>
                       </div>
@@ -180,7 +180,7 @@ export default function MyProfilePage() {
           </div>
         </div>
       </main>
-      <Footer />
+     
     </div>
   );
 }

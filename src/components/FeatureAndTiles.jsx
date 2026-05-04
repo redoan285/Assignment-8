@@ -10,7 +10,7 @@ const FeatureAndTiles = async () => {
   );
 
   const photos = await res.json()
-  const toPhotos = photos.slice(0, 8);
+  const toPhotos = photos.slice(0, 4);
 
   return (
     <section className="py-20 md:py-28 bg-base-100">
@@ -37,7 +37,7 @@ const FeatureAndTiles = async () => {
         </div>
 
         {/* Tiles Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-6 md:gap-8">
           {toPhotos.map((tile) => (
             <TileCard key={tile.id} tile={tile} />
           ))}

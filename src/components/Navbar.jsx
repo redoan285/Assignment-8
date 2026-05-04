@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { authClient } from "@/lib/auth-client";
+import { authClient } from "../../src/lib/auth-client";
 import { LogOut, User, LayoutGrid, Home, UserCircle } from "lucide-react";
 
 export default function Navbar() {
@@ -19,7 +19,8 @@ export default function Navbar() {
     await authClient.signOut({
         fetchOptions: {
             onSuccess: () => {
-                window.location.href = "src\app\login\page.js";
+                // window.location.href = "src\app\login\page.js";
+                router.push("/login");
             }
         }
     });

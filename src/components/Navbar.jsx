@@ -1,12 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";   // ← router যোগ করা হয়েছে
 import { authClient } from "../../src/lib/auth-client";
 import { LogOut, User, LayoutGrid, Home, UserCircle } from "lucide-react";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const router = useRouter();                    // ← এটা যোগ করো
   const { data: session, isPending } = authClient.useSession();
 
   const navLinks = [
@@ -16,14 +17,19 @@ export default function Navbar() {
   ];
 
   const handleLogout = async () => {
-    await authClient.signOut({
+    try {
+      await authClient.signOut({
         fetchOptions: {
-            onSuccess: () => {
-                // window.location.href = "src\app\login\page.js";
-                router.push("/login");
-            }
-        }
-    });
+          onSuccess: () => {
+            router.push("/login");        // সঠিকভাবে redirect
+            router.refresh();             // অতিরিক্ত ভালো প্র্যাকটিস
+          },
+        },
+      });
+    } catch (error) {
+      console.error("Logout error:", error);
+      alert("Logout failed. Please try again.");
+    }
   };
 
   return (
@@ -46,6 +52,7 @@ export default function Navbar() {
             ))}
           </ul>
         </div>
+
         <Link href="/" className="flex items-center gap-2 group">
           <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-primary-content font-bold text-xl shadow-lg group-hover:rotate-12 transition-transform">
             T
@@ -84,14 +91,14 @@ export default function Navbar() {
               <div className="w-10 rounded-full">
                 <img
                   alt="User Avatar"
-                  src={session.user.image || `https://ui-avatars.com/api/?name=${session.user.name}`}
+                  src={session.user?.image || `https://ui-avatars.com/api/?name=${session.user?.name}`}
                 />
               </div>
             </div>
             <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow-xl bg-base-100 rounded-xl w-52 border border-base-200">
               <li className="menu-title px-4 py-2 border-b border-base-200 mb-2">
                 <p className="text-xs font-bold text-base-content/50 uppercase">Account</p>
-                <p className="text-sm font-semibold truncate">{session.user.name}</p>
+                <p className="text-sm font-semibold truncate">{session.user?.name}</p>
               </li>
               <li>
                 <Link href="/my-profile" className="py-2">
@@ -99,7 +106,10 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <button onClick={handleLogout} className="text-error py-2">
+                <button 
+                  onClick={handleLogout} 
+                  className="text-error py-2 w-full text-left"
+                >
                   <LogOut className="w-4 h-4" /> Logout
                 </button>
               </li>
